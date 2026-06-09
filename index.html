@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — DWARKA Gabryel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a href="#top" class="nav__logo">DWARKA Gabryel<span class="cursor">_</span></a>
+
+      <!-- Menu burger (mobile) -->
+      <button class="nav__burger" id="burgerBtn" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="btn-darkmode" id="darkModeToggle" aria-label="Changer le thème">
+            <span class="icon-dark">🌙</span>
+            <span class="icon-light" style="display:none">☀️</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Bonjour, je suis</p>
+        <h1 class="hero__name">DWARKA Gabryel<span class="cursor-blink">_</span></h1>
+        <p class="hero__role">Développeur Web · Étudiant en <span class="accent">Informatique</span></p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero__decoration" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT ME
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title">À propos<span class="accent">.</span></h2>
+        <div class="about__grid">
+
+          <!-- Avatar / photo -->
+          <div class="about__avatar-wrap">
+            <div class="about__avatar" aria-label="Avatar">
+              <span class="avatar__initials">
+                DG
+              </span>
+            </div>
+          </div>
+
+          <!-- Texte -->
+          <div class="about__text">
+            <h3 class="about__heading">Salut, moi c'est <span class="accent">DWARKA Gabryel</span> 👋</h3>
+            <p>
+              Je suis un passioné d'informatique depuis mon plus jeune âge.
+              Actuellement en première année de bachelor en informatique, j'apprends à maitriser les technologies de demain.
+            </p>
+            <p>
+              Mon objectif : Trouver une opportunité de stage ou d'emploi dans le domaine de la cybersécurité ou du réseau.
+              J'aime particulièrement les défis techniques et la résolution de problèmes.
+            </p>
+            <div class="about__skills">
+              <h4>Stack &amp; outils</h4>
+              <ul class="skills__list">
+                <li class="skill-tag">Python</li>
+                <li class="skill-tag">C++</li>
+                <li class="skill-tag">Les infrastructures réseaux</li>
+                <li class="skill-tag">Help-desk</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROJETS
+    ═══════════════════════════════════════════ -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <h2 class="section__title">Projets<span class="accent">.</span></h2>
+
+        <!-- Filtres JS -->
+        <div class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="filter-btn filter-btn--active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="done">
+            <span class="tag tag--done">Fait</span>
+          </button>
+          <button class="filter-btn" data-filter="wip">
+            <span class="tag tag--wip">En cours</span>
+          </button>
+          <button class="filter-btn" data-filter="planned">
+            <span class="tag tag--planned">Envisagé</span>
+          </button>
+        </div>
+
+        <div class="projects__grid" id="projectsGrid">
+
+          <!-- ─── PROJET 1 ────────────────────────────── -->
+          <article class="project-card" data-tags="done">
+            <div class="project-card__header">
+              <span class="project-card__number">01</span>
+              <div class="project-card__tags">
+                <span class="tag tag--done">Fait</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">le Marketing no code</h3>
+            <p class="project-card__desc">
+              Un projet réalisé lors de mon premier hackathon, qui constait à plusieurs outils fabriqués à partir de worklow sans code(no code), pour assister le équipe marketing dans leurs tâches quotidiennes, notamment dans la promotion de notre école. Ce projet a remporté le premier prix. Ce n'était pas un projet de développement à proprement parler, mais il m'a permis de découvrir les possibilités offertes par les outils no code et d'apprendre à les utiliser efficacement.
+            </p>
+            <div class="project-card__footer">
+              <a href="https://hackmd.io/@ArifJbrl/rkAiaQxm-e/edit" class="btn btn--sm btn--ghost">Documentation HackMD</a>
+            </div>
+          </article>
+
+          <!-- ─── PROJET 2 ────────────────────────────── -->
+          <article class="project-card" data-tags="wip">
+            <div class="project-card__header">
+              <span class="project-card__number">02</span>
+              <div class="project-card__tags">
+                <span class="tag tag--wip">En cours</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">Devenir un white hat</h3>
+            <p class="project-card__desc">
+              Un projet personnel que j'ai commencé récemment, qui consiste à apprendre les techniques de piratage éthique (white hat) pour mieux comprendre la sécurité informatique et les vulnérabilités des systèmes. J'ai suivi plusieurs cours en ligne pour développer mes compétences en cybersécurité. Etudié dans cette école me permet de me rapprocher cet objectif grâce aux structures mises en place pour rencontrer des experts. Mon objectif est de devenir un expert en sécurité informatique et de contribuer à rendre le web plus sûr.
+            </p>
+            <div class="project-card__footer">
+            </div>
+          </article>
+
+          <!-- ─── PROJET 3 ────────────────────────────── -->
+          <article class="project-card" data-tags="planned">
+            <div class="project-card__header">
+              <span class="project-card__number">03</span>
+              <div class="project-card__tags">
+                <span class="tag tag--planned">Envisagé</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">Fight with the rythme</h3>
+            <p class="project-card__desc">
+              Ma premiere passion qui m'a emmené vers l'informatique, c'est les jeux vidéos. J'ai toujours été fasciné par les jeux de combat comme Street Fighter et Tekken et les jeux de rythme comme Projet Sekai ou Friday Night Funkin. J'ai donc pour projet de créer mon propre jeu de combat et derythme, en utilisant des logiciels comme Unreal Engine qui utilise du C++. Ce projet est encore à l'état d'idée, mais j'espère pouvoir le réaliser dans les prochains mois pour ralier mes passions.
+            </p>
+            <div class="project-card__footer">
+              <a href="#" class="btn btn--sm btn--disabled" aria-disabled="true">Bientôt</a>
+            </div>
+          </article>
+
+        </div><!-- /projects__grid -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="contact">
+      <div class="container container--narrow">
+        <h2 class="section__title">Contact<span class="accent">.</span></h2>
+        <p class="contact__intro">
+          Tu veux échanger, collaborer ou simplement dire bonjour ?
+          N'hésite pas à me contacter via l'un de ces canaux.
+        </p>
+
+        <div class="contact__links">
+          <a href="dwarka.g24@gmail.com" class="contact-card">
+            <span class="contact-card__icon">✉️</span>
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value">dwarka.g24@gmail.com</span>
+          </a>
+          <a href="https://github.com/dwarkag24-collab" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </span>
+            <span class="contact-card__label">GitHub</span>
+            <span class="contact-card__value">github.com/dwarkag24-collab</span>
+          </a>
+          <a href="https://linkedin.com/in/dwarka-gabryel-bb38a9387" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+              </svg>
+            </span>
+            <span class="contact-card__label">LinkedIn</span>
+            <span class="contact-card__value">linkedin.com/in/dwarka-gabryel-bb38a9387</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Fait avec <span class="accent">♥</span> par Gabryel Dwarka · 2026
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ─────────────────────────────────────────
+    // Menu burger mobile
+    // ─────────────────────────────────────────
+    const burger = document.getElementById('burgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('nav__links--open');
+      burger.setAttribute('aria-expanded', isOpen);
+      burger.classList.toggle('is-open', isOpen);
+    });
+
+    // Ferme le menu quand on clique un lien
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('nav__links--open');
+        burger.classList.remove('is-open');
+      });
+    });
+
+    // ─────────────────────────────────────────
+    // Dark mode toggle
+    // ─────────────────────────────────────────
+    const toggle = document.getElementById('darkModeToggle');
+    const iconDark = toggle.querySelector('.icon-dark');
+    const iconLight = toggle.querySelector('.icon-light');
+
+    // Lire la préférence sauvegardée
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.documentElement.classList.add('light-mode');
+      iconDark.style.display = 'none';
+      iconLight.style.display = 'inline';
+    }
+
+    toggle.addEventListener('click', () => {
+      const isLight = document.documentElement.classList.toggle('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      iconDark.style.display = isLight ? 'none' : 'inline';
+      iconLight.style.display = isLight ? 'inline' : 'none';
+    });
+
+    // ─────────────────────────────────────────
+    // Filtrage des projets par tag
+    // ─────────────────────────────────────────
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Activer le bon bouton
+        filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+        btn.classList.add('filter-btn--active');
+
+        // Afficher / masquer les cartes
+        cards.forEach(card => {
+          const tags = card.dataset.tags || '';
+          const show = filter === 'all' || tags.includes(filter);
+          card.style.display = show ? 'flex' : 'none';
+          card.style.animation = show ? 'fadeIn .3s ease' : '';
+        });
+      });
+    });
+
+    // ─────────────────────────────────────────
+    // Scroll reveal (léger)
+    // ─────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.project-card, .about__grid, .contact__links');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
