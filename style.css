@@ -386,13 +386,13 @@ h1, h2, h3, h4 {
   height: 160px;
   border-radius: var(--radius-lg);
   border: 2px solid var(--border);
-  background: var(--surface);
+  background-image: url('avatar.jpg'); 
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   flex-shrink: 0;
-  /* ✏️ Si tu mets une photo, remplace le background par: background-image: url('photo.jpg'); background-size: cover; */
 }
 
 .avatar__initials {
@@ -442,6 +442,36 @@ h1, h2, h3, h4 {
 }
 
 .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+.about__hobbies h4 {
+  font-size: .85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-muted);
+  margin-bottom: .75rem;
+  margin-top: var(--space-md);
+}
+
+.hobbies__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.hobby-tag {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: .3em .85em;
+  border-radius: var(--radius-sm);
+  font-size: .85rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.hobby-tag:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ═══════════════════════════════════════════════════
    TAGS (statut projet)
