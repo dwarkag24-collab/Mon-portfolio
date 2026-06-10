@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — DWARKA Gabryel</title>
+  <title>DWARKA Gabryel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -18,7 +18,6 @@
     <nav class="nav">
       <a href="#top" class="nav__logo">DWARKA Gabryel<span class="cursor">_</span></a>
 
-      <!-- Menu burger (mobile) -->
       <button class="nav__burger" id="burgerBtn" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
       </button>
@@ -66,12 +65,10 @@
         <h2 class="section__title">À propos<span class="accent">.</span></h2>
         <div class="about__grid">
 
-          <!-- Avatar / photo -->
+          <!-- Avatar -->
           <div class="about__avatar-wrap">
             <div class="about__avatar" aria-label="Avatar">
-              <span class="avatar__initials">
-                DG
-              </span>
+              <img src="avatar.jpg" alt="Photo de Gabryel Dwarka" class="avatar__image" />
             </div>
           </div>
 
@@ -93,6 +90,15 @@
                 <li class="skill-tag">C++</li>
                 <li class="skill-tag">Les infrastructures réseaux</li>
                 <li class="skill-tag">Help-desk</li>
+              </ul>
+            </div>
+            <div class="about__hobbies">
+              <h4>Centres d'intérêt</h4>
+              <ul class="hobbies__list">
+                <li class="hobby-tag">Le Gaming</li>
+                <li class="hobby-tag">Ecouter et composer de la musique</li>
+                <li class="hobby-tag">Le Street-workout</li>
+                <li class="hobby-tag">Les sports de combats</li>
               </ul>
             </div>
           </div>
@@ -190,11 +196,13 @@
         </p>
 
         <div class="contact__links">
-          <a href="dwarka.g24@gmail.com" class="contact-card">
-            <span class="contact-card__icon">✉️</span>
-            <span class="contact-card__label">Email</span>
-            <span class="contact-card__value">dwarka.g24@gmail.com</span>
-          </a>
+          <div class="contact__links">
+            <a href="#" id="email-card" class="contact-card" data-email="dwarka.g24@gmail.com">
+              <span class="contact-card__icon">✉️</span>
+              <span class="contact-card__label">Email</span>
+              <span class="contact-card__value">dwarka.g24@gmail.com</span>
+            </a>
+          </div>
           <a href="https://github.com/dwarkag24-collab" target="_blank" rel="noopener" class="contact-card">
             <span class="contact-card__icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -226,7 +234,7 @@
   <footer class="footer">
     <div class="container">
       <p>
-        Fait avec <span class="accent">♥</span> par Gabryel Dwarka · 2026
+        Fait par Gabryel Dwarka · 2026
       </p>
     </div>
   </footer>
@@ -316,6 +324,31 @@
       el.classList.add('reveal');
       observer.observe(el);
     });
+
+    document.getElementById('email-card').addEventListener('click', function(event) {
+  // 1. Bloque le comportement par défaut du lien
+    event.preventDefault(); 
+  
+  // 2. Récupère l'adresse email stockée dans l'attribut data-email
+    const emailText = this.getAttribute('data-email');
+    const valueSpan = this.querySelector('.contact-card__value');
+  
+  // 3. Copie dans le presse-papier
+    navigator.clipboard.writeText(emailText).then(() => {
+    // Petit bonus : Change temporairement le texte pour confirmer la copie
+      const originalText = valueSpan.textContent;
+      valueSpan.textContent = "Copié !";
+      valueSpan.style.color = "#4BB543"; // Optionnel : change la couleur en vert
+    
+    // Remet le texte d'origine après 1,5 seconde
+      setTimeout(() => {
+        valueSpan.textContent = originalText;
+        valueSpan.style.color = ""; 
+        }, 1500);
+    }).catch(err => {
+    console.error("Erreur lors de la copie : ", err);
+    });
+  });
   </script>
 </body>
 </html>
